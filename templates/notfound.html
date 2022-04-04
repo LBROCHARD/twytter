@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Twytter</title>
+        <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/index.css') }}">
+        <link rel="icon" href="static/img/twytter.png">
+    </head>
+    <body>
+        <div name="menue" id="sidemenue">
+
+            <h1 id="twytter">twytter</h1>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/new">New twyt</a>
+            </li>
+            <li>
+                <a href="/search">Search by #</a>
+            </li>
+
+        </div>
+
+        <div name="content" id="contentnew">
+
+            <h1 id="notfound">No twytts found with the #{{ hash }}</h1>
+
+            <form action="/search">
+                <button type="submit">back to search</button>
+            </form>
+
+        </div>
+    </body>
+</html>

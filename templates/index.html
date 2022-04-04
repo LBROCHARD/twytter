@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Twytter</title>
+        <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/index.css') }}">
+        <link rel="icon" href="static/img/twytter.png">
+    </head>
+    <body>
+        <div name="menue" id="sidemenue">
+
+            <h1 id="twytter">Twytter</h1>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/new">New twyt</a>
+            </li>
+            <li>
+                <a href="/search">Search by #</a>
+            </li>
+
+        </div>
+        
+        <div name="content" id="content" class="flex-container">
+
+            <h1 id="homeh1">Home</h1>
+
+            <ul>
+                    {% for message in twyts %}
+                    <div id="twytts">
+
+                        <!-- <form action="/like" method="post"> -->
+                            <h2 id="userName">{{ message["name"] }}</h2>
+                            <p id="timeanddate">{{ message["time"] }}</p>
+
+                            <div id="messagetext" class="flex-container">
+                            {% for parts in message["message"] %}
+                                    {% if parts["type"] == "text" %}
+                                        <p id="userMessage">{{ parts["content"] }}</p>
+
+                                    {% elif parts["type"] == "hashtag" %}
+                                        <form action="/hashtag" method="post">
+                                        <!-- <p><a id="userhashtag" name="hashtaghreaf" type="submit" value="{{ parts['content'] }}" href="" methods="post">{{ parts["content"] }}</a></p> -->
+                                        <p><button id="hashtag" type="submit" name="hashtag" value="{{ parts['content'] }}">{{ parts["content"] }}</button></p>
+                                        </form>
+
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+
+                            {% if message['image'] != "" %}
+                                <img id="theimage" src="static/img/uploads/{{ message['image'] }}" height="300" width="300">
+                            {% endif %}
+
+                        <form action="/like" method="post">
+                            <!-- <p>{{ twyts.index(message) }}</p> -->
+                            <div id="likediv" class="flex-container">
+                                <button type="submit" name="likeButton" value="{{twyts.index(message)}}">   <img id="like image " src="static/img/{{ message['like'] }}.png" height="30" width="30">     </button>  <!-- message.index(twyts) -->
+                                <p id="like">{{ message["like"] }}</p>
+                            </div>
+                        </form>
+
+                        <div name="barre" id="barreSeparation"> </div>
+
+                        <form action="/awnser" method="post">
+                            <img src="static/img/arrow.png" height="30" width="30">
+                            <input name="NameAwnser" placeholder="name" type="text"/>
+                            <textarea name="MessageAwnser" placeholder="message" rows="2" cols="120"></textarea>
+                            <button type="submit" name="awnserButton" value="{{twyts.index(message)}}">awnser</button>
+                        </form>
+
+                        <form action="/clear" method="post">
+                            <button type="submit" name="clearButton" value="{{twyts.index(message)}}">clear</button>
+                        </form>
+
+
+                        {% for awnsers in message["awnser"] %}
+
+                            <h2 id="awnsername">{{ awnsers["name"] }}</h2>
+                            <p id="awnsertime">{{ awnsers["time"] }}</p>
+                            <p id="awnsermessage">{{ awnsers["message"] }}</p>
+
+                        {% endfor %}
+
+                    </div>
+                    {% endfor %}
+            </ul>
+
+        </div>
+    </body>
+</html>

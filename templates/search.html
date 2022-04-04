@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Twytter</title>
+        <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/index.css') }}">
+        <link rel="icon" href="static/img/twytter.png">
+    </head>
+    <body>
+        <div name="menue" id="sidemenue">
+
+            <h1 id="twytter">twytter</h1>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/new">New twyt</a>
+            </li>
+            <li>
+                <a href="/search">Search by #</a>
+            </li>
+
+        </div>
+
+        <div name="content" id="contentnew">
+
+            <h1>Search by Hashtag!</h1>
+
+            <form action="/hashtag" method="post">
+                <input name="hashtag" placeholder="enter hashtag" type="text"/>
+                <br/>
+                <button type="submit">chercher</button>
+                <br/>
+            </form>
+
+        </div>
+    </body>
+</html>

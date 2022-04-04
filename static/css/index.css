@@ -1,0 +1,199 @@
+#sidemenue{
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(115, 178, 238);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+#twytter{
+    color: white;
+    padding-left: 35px;
+}
+
+#twytts{
+    border-radius: 10px;
+    border-width: 3px;
+    width: 75%;
+    margin-left: 18%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(235, 245, 255);
+    overflow: auto;
+    text-align:left;
+    padding-left: 3%;
+    transition-duration: 0.3s;
+}
+
+#twytts:hover {
+    transition-duration: 0.3s;
+    border-left: 6px solid;
+    border-bottom: 6px solid;
+    background-color: rgb(221, 231, 241);
+    border-color: rgb(115, 178, 238);
+}
+
+#userName {
+    font-size: 40px;
+    color: rgb(51, 73, 175);
+    margin-left: 0px;
+}
+
+#timeanddate {
+    color: rgb(104, 104, 104)
+}
+
+#userMessage {
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+    font-size: 23px;
+    margin-left: 0px;
+
+}
+
+#userhashtag {
+    color: rgb(115, 178, 238);
+    font-size: 23px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-up 20px;
+}
+
+#awnsername {
+    font-size: 25px;
+    color: rgb(51, 73, 175);
+    margin-left: 0px;
+}
+
+#awnsertime {
+    color: rgb(104, 104, 104);
+    font-size: 15px;
+}
+
+#awnsermessage {
+    color: rgb(48, 48, 48)
+    margin-left: 20px;
+    font-size: 20px;
+    margin-left: 0px;
+}
+
+#messagetext {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#content{
+    background-color: rgb(250, 255, 255);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+#contentnew {
+    text-align: center;
+    margin-left: 9%;
+}
+
+button {
+    transition-duration: 0.2s;
+    border: rgb(115, 178, 238);
+    border-radius: 20px;
+    background-color: rgb(115, 178, 238);
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 33px;
+    cursor: pointer;
+}
+
+button:hover {
+    transition-duration: 0.2s;
+    border-left: 3px solid;
+    border-bottom: 3px solid;
+    border-color: rgb(35, 84, 190);
+}
+
+button:active {
+    transition-duration: 0.2s;
+    border-left: 3px;
+    border-bottom: 3px;
+}
+
+input {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+textarea {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h1 {
+    color: rgb(35, 84, 190);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#homeh1 {
+    margin-left: 23%;
+    font-size: 50px;
+}
+
+a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#like {
+    color: rgb(115, 178, 238);
+    text-align:left;
+    margin-left: 10px;
+}
+
+#likediv {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+}
+
+#barreSeparation {
+    background-color: grey;
+    height: 2px;
+    width: 80%;
+    margin-left: 10%;
+
+}
+
+
+#hashtag {
+    background-color: rgb(221, 231, 241);
+    border: #FFFFFF;
+    background-color: ;
+    font-size: 23px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-up 20px;
+    color: rgb(35, 84, 190);
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#hashtag:hover {
+    background-color: rgb(235, 245, 255);
+    font-size: 23px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-up 20px;
+    color: rgb(40, 89, 195);
+
+}
+
+#hashtag:active {
+    font-size: 23px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-up 20px; {
+}
+
+
+
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Twytter</title>
+        <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/index.css') }}">
+        <link rel="icon" href="static/img/twytter.png">
+    </head>
+    <body>
+        <div name="menue" id="sidemenue">
+
+            <h1 id="twytter">twytter</h1>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/new">New twyt</a>
+            </li>
+            <li>
+                <a href="/search">Search by #</a>
+            </li>
+
+        </div>
+
+        <div name="content" id="contentnew">
+
+            <h1>Write a new twyts ! Told us something about you !</h1>
+
+            <form action="/add" class="" method="post" enctype="multipart/form-data">
+                <input name="Name" placeholder="name" type="text"/>
+                <br/>
+                <textarea name="newMessage" placeholder="message" rows="8" cols="80" maxlength="280"></textarea>
+                <br/>
+
+                <!-- <form action="/imagepost" method="post" enctype="multipart/form-data"> -->
+                <input type="file" class="custom-file-input" name="image">
+                <!-- <button type="submit">ajouter une image</button> -->
+                <!-- </form> -->
+
+                <button type="submit" class="btn btn-primary">envoyer un message</button>
+            </form>
+
+        </div>
+    </body>
+</html>
